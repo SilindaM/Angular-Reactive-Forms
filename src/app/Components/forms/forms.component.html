@@ -1,0 +1,11 @@
+<form [formGroup]="formInstance" (ngSubmit)="onSubmit()">
+    <!--First Input-->
+    <label for="firstName">First Name :</label>
+    <input type="text" id="firstName" formControlName="firstName">
+    <!--Second Input-->
+    <label for="lastName">Last Name :</label>
+    <input type="text" id="lastName" formControlName="lastName">
+    <p>Complete the form to enable button</p>
+    <button class="btn btn-primary" type="submit" [disabled]="!formInstance.valid">Submit</button>
+
+</form>
